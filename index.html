@@ -3,30 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Priya Beauty Parlour</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8fb;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #8e2f5d;
+            color: white;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Hero Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e91e63;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 25px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #8e2f5d;
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background: white;
+            width: 230px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .service h3 {
+            color: #e91e63;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            line-height: 1.6;
+        }
+
+        /* About */
+        .about {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Contact */
+        .contact {
+            background: #f8d9e7;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #8e2f5d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .slider {
+                height: 400px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Priya Beauty Parlour</h1>
+    <!-- Navigation -->
+    <nav>
+        <h2>Priya Beauty Parlour</h2>
 
-    <h2>Welcome!</h2>
+        <div>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-    <p>Beauty • Style • Confidence</p>
 
-    <h2>Our Services</h2>
+    <!-- Automatic Image Slider -->
+    <div class="slider">
 
-    <ul>
-        <li>Hair Styling</li>
-        <li>Facial</li>
-        <li>Makeup</li>
-        <li>Bridal Makeup</li>
-    </ul>
+        <div class="slide active">
+            <img src="Image1.jpg" alt="Priya Beauty Parlour">
+        </div>
 
-    <h2>Contact Us</h2>
+        <div class="slide">
+            <img src="image2.jpg" alt="Beauty Parlour">
+        </div>
 
-    <p>Phone: Your Phone Number</p>
-    <p>Location: Your Parlour Address</p>
+        <div class="overlay">
+            <div class="hero-text">
+                <h1>Priya Beauty Parlour</h1>
+                <p>Beauty • Style • Confidence</p>
+                <a href="#contact" class="button">Book Your Appointment</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Services -->
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>💇 Hair Styling</h3>
+                <p>Professional hair styling, cutting and grooming.</p>
+            </div>
+
+            <div class="service">
+                <h3>✨ Facial</h3>
+                <p>Relaxing facial and skincare treatments.</p>
+            </div>
+
+            <div class="service">
+                <h3>💄 Makeup</h3>
+                <p>Beautiful makeup for parties and special occasions.</p>
+            </div>
+
+            <div class="service">
+                <h3>👰 Bridal Makeup</h3>
+                <p>Elegant bridal makeup for your special day.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <div class="about">
+            <p>
+                Welcome to Priya Beauty Parlour.
+                We believe every woman deserves to feel beautiful,
+                confident and special.
+            </p>
+
+            <p>
+                Our goal is to provide quality beauty services
+                in a comfortable and friendly environment.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📞 Phone: Your Phone Number</p>
+
+        <p>📍 Location: Your Parlour Address</p>
+
+        <p>🕐 Opening Hours: 10:00 AM – 8:00 PM</p>
+
+        <br>
+
+        <a href="tel:+910000000000" class="button">
+            Call Now
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Priya Beauty Parlour</p>
+
+        <p>Beauty • Style • Confidence</p>
+
+    </footer>
+
+
+    <!-- Automatic Slider JavaScript -->
+    <script>
+
+        let slides = document.querySelectorAll(".slide");
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+
+            slides.forEach(function(slide) {
+                slide.classList.remove("active");
+            });
+
+            slides[index].classList.add("active");
+        }
+
+        setInterval(function() {
+
+            currentSlide++;
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            showSlide(currentSlide);
+
+        }, 4000);
+
+    </script>
 
 </body>
 </html>
