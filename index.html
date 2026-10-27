@@ -1,343 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Priya Beauty Parlour</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff8fb;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav {
-            background: #8e2f5d;
-            color: white;
-            padding: 18px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav h2 {
-            font-size: 24px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        /* Hero Slider */
-        .slider {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.35);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-text h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
-
-        .hero-text p {
-            font-size: 22px;
-            margin-bottom: 25px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #e91e63;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 25px;
-            text-align: center;
-        }
-
-        section h2 {
-            color: #8e2f5d;
-            font-size: 34px;
-            margin-bottom: 35px;
-        }
-
-        /* Services */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .service {
-            background: white;
-            width: 230px;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .service h3 {
-            color: #e91e63;
-            margin-bottom: 12px;
-        }
-
-        .service p {
-            line-height: 1.6;
-        }
-
-        /* About */
-        .about {
-            max-width: 800px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        /* Contact */
-        .contact {
-            background: #f8d9e7;
-        }
-
-        .contact p {
-            margin: 12px;
-            font-size: 18px;
-        }
-
-        /* Footer */
-        footer {
-            background: #8e2f5d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-
-            nav {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .slider {
-                height: 400px;
-            }
-
-            .hero-text h1 {
-                font-size: 36px;
-            }
-
-            .hero-text p {
-                font-size: 18px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="Prashant AI Automation helps businesses simplify repetitive work with AI assistants and intelligent workflows.">
+  <title>Prashant AI Automation | Work Smarter with AI</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <h2>Priya Beauty Parlour</h2>
-
-        <div>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <div class="announcement">Practical AI. Smarter workflows. More time for your business.</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Prashant AI Automation home">
+      <span class="brand-mark">P<span>AI</span></span>
+      <span class="brand-name">Prashant <b>AI Automation</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#services">Services</a><a href="#process">How it works</a><a href="#work">Use cases</a><a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Discuss a project <span>↗</span></a>
     </nav>
+  </header>
 
-
-    <!-- Automatic Image Slider -->
-    <div class="slider">
-
-        <div class="slide active">
-            <img src="Image1.jpg" alt="Priya Beauty Parlour">
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> AI & WORKFLOW AUTOMATION</div>
+        <h1>Less repetitive work.<br><span>More room to grow.</span></h1>
+        <p class="hero-intro">We help businesses streamline everyday tasks with AI assistants and connected workflows—so teams can spend more time on the work that matters.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">Let's discuss your idea <span>↗</span></a>
+          <a class="button secondary" href="#services">Explore services <span>↓</span></a>
         </div>
-
-        <div class="slide">
-            <img src="image2.jpg" alt="Beauty Parlour">
+        <div class="trust-note"><span class="mini-check">✓</span> Practical solutions · Clear communication · Built around your process</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of connected automation steps">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="art-label label-top"><span class="dot blue"></span> Workflow running</div>
+        <div class="workflow-card">
+          <div class="flow-node"><span class="node-icon purple">✦</span><div><b>Incoming enquiry</b><small>Message received</small></div><span class="node-state">01</span></div>
+          <div class="flow-connector"><i></i></div>
+          <div class="flow-node"><span class="node-icon blue-bg">AI</span><div><b>AI assistant</b><small>Understand & respond</small></div><span class="node-state">02</span></div>
+          <div class="flow-connector"><i></i></div>
+          <div class="flow-node"><span class="node-icon green">✓</span><div><b>Lead captured</b><small>Organized for follow-up</small></div><span class="node-state">03</span></div>
+          <div class="card-footer"><span class="live-dot"></span> Example workflow concept <span class="footer-right">n8n · AI</span></div>
         </div>
-
-        <div class="overlay">
-            <div class="hero-text">
-                <h1>Priya Beauty Parlour</h1>
-                <p>Beauty • Style • Confidence</p>
-                <a href="#contact" class="button">Book Your Appointment</a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- Services -->
-    <section id="services">
-
-        <h2>Our Services</h2>
-
-        <div class="services">
-
-            <div class="service">
-                <h3>💇 Hair Styling</h3>
-                <p>Professional hair styling, cutting and grooming.</p>
-            </div>
-
-            <div class="service">
-                <h3>✨ Facial</h3>
-                <p>Relaxing facial and skincare treatments.</p>
-            </div>
-
-            <div class="service">
-                <h3>💄 Makeup</h3>
-                <p>Beautiful makeup for parties and special occasions.</p>
-            </div>
-
-            <div class="service">
-                <h3>👰 Bridal Makeup</h3>
-                <p>Elegant bridal makeup for your special day.</p>
-            </div>
-
-        </div>
-
+        <div class="art-label label-bottom">Connect the tools you already use <span>↗</span></div>
+      </div>
     </section>
 
+    <section class="proof-strip">
+      <div><b>AI assistants</b><span>Support common questions</span></div>
+      <div><b>Connected workflows</b><span>Reduce manual hand-offs</span></div>
+      <div><b>Lead capture</b><span>Keep enquiries organized</span></div>
+      <div><b>Human in control</b><span>Design sensible review steps</span></div>
+    </section>
 
-    <!-- About -->
-    <section id="about">
+    <section class="section" id="services">
+      <div class="section-heading">
+        <div><div class="eyebrow">WHAT WE CAN HELP WITH</div><h2>Automation that works<br><span>for your workflow.</span></h2></div>
+        <p>Start with a repetitive task, a slow hand-off, or a customer question that deserves a faster response. We'll help shape a practical approach.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon violet">✧</div><div class="card-kicker">01 / CUSTOMER EXPERIENCE</div><h3>AI assistants & chatbots</h3><p>Help answer routine questions, guide visitors, and collect enquiry details with clear boundaries.</p><a href="#contact" class="text-link">Discuss an assistant <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon cyan">⤳</div><div class="card-kicker">02 / OPERATIONS</div><h3>Workflow automation</h3><p>Connect apps and move information between steps to reduce repetitive copy-and-paste work.</p><a href="#contact" class="text-link">Improve a workflow <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon pink">◎</div><div class="card-kicker">03 / MESSAGING</div><h3>Messaging automation</h3><p>Design supported messaging flows for enquiries, responses, and follow-up with appropriate platform permissions.</p><a href="#contact" class="text-link">Explore messaging <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon green">▤</div><div class="card-kicker">04 / LEAD MANAGEMENT</div><h3>Lead capture & organization</h3><p>Route website enquiries into a structured sheet or business system for easier follow-up.</p><a href="#contact" class="text-link">Organize my leads <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon orange">⌘</div><div class="card-kicker">05 / INTEGRATIONS</div><h3>App integrations</h3><p>Plan reliable connections between forms, spreadsheets, APIs, and the tools your team uses.</p><a href="#contact" class="text-link">Connect my tools <span>↗</span></a></article>
+        <article class="service-card featured-card"><div class="service-icon white-icon">＋</div><div class="card-kicker">NOT SURE WHERE TO START?</div><h3>Let's map the opportunity</h3><p>Tell us about one task that takes too much time. We'll help identify a sensible next step.</p><a href="#contact" class="text-link">Share your challenge <span>↗</span></a></article>
+      </div>
+    </section>
 
-        <h2>About Us</h2>
-
-        <div class="about">
-            <p>
-                Welcome to Priya Beauty Parlour.
-                We believe every woman deserves to feel beautiful,
-                confident and special.
-            </p>
-
-            <p>
-                Our goal is to provide quality beauty services
-                in a comfortable and friendly environment.
-            </p>
+    <section class="process-section" id="process">
+      <div class="section">
+        <div class="section-heading">
+          <div><div class="eyebrow">A CLEAR, PRACTICAL PROCESS</div><h2>From idea to<br><span>useful automation.</span></h2></div>
+          <p>Keep the process understandable. Confirm the goal first, test the workflow, and make sure people remain in control where needed.</p>
         </div>
-
+        <div class="steps">
+          <article><span class="step-number">01</span><div class="step-line"></div><h3>Understand</h3><p>Map the task, the people involved, and what a good outcome looks like.</p></article>
+          <article><span class="step-number">02</span><div class="step-line"></div><h3>Design</h3><p>Choose the right tools, data fields, checks, and hand-off points.</p></article>
+          <article><span class="step-number">03</span><div class="step-line"></div><h3>Build & test</h3><p>Test normal cases and edge cases before relying on the automation.</p></article>
+          <article><span class="step-number">04</span><div class="step-line"></div><h3>Improve</h3><p>Review results and refine the workflow as your needs evolve.</p></article>
+        </div>
+      </div>
     </section>
 
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-
-        <h2>Contact Us</h2>
-
-        <p>📞 Phone: 6387071711 </p>
-
-        <p>📍 Location: Krishna Nagar, Kanpur</p>
-
-        <p>🕐 Opening Hours: 10:00 AM – 8:00 PM</p>
-
-        <br>
-
-        <a href="tel:+910000000000" class="button">
-            Call Now
-        </a>
-
+    <section class="section" id="work">
+      <div class="section-heading">
+        <div><div class="eyebrow">POSSIBLE USE CASES</div><h2>Small improvements.<br><span>Meaningful time saved.</span></h2></div>
+        <p>These are example project ideas—not claims of completed client work. We can tailor the scope to your tools and requirements.</p>
+      </div>
+      <div class="usecase-grid">
+        <article class="usecase"><div class="usecase-top"><span class="usecase-symbol">✉</span><span>01</span></div><h3>Enquiry to spreadsheet</h3><p>Collect a website enquiry, check required fields, and add a clean row for follow-up.</p><div class="tag-row"><span>Forms</span><span>n8n</span><span>Sheets</span></div></article>
+        <article class="usecase"><div class="usecase-top"><span class="usecase-symbol">✦</span><span>02</span></div><h3>FAQ assistant</h3><p>Answer common questions from approved business information and hand off uncertain requests.</p><div class="tag-row"><span>AI</span><span>Knowledge</span><span>Support</span></div></article>
+        <article class="usecase"><div class="usecase-top"><span class="usecase-symbol">⇄</span><span>03</span></div><h3>App-to-app workflow</h3><p>Move data between connected tools and notify the right person when action is needed.</p><div class="tag-row"><span>Integrations</span><span>APIs</span><span>Alerts</span></div></article>
+      </div>
     </section>
 
+    <section class="about-section" id="about">
+      <div class="section about-layout">
+        <div class="about-mark"><div class="about-glow"></div><div class="about-logo">P<span>AI</span></div><div class="about-caption">MAKE WORK FLOW</div></div>
+        <div class="about-copy"><div class="eyebrow">ABOUT PRASHANT AI AUTOMATION</div><h2>Technology should make work <span>simpler.</span></h2><p>We focus on practical automation: understanding the problem, connecting the right tools, and building a workflow that is clear enough to maintain.</p><p>Every project starts with your goal—not with adding AI where it isn't needed.</p><a href="#contact" class="button primary">Tell us what you'd like to improve <span>↗</span></a></div>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
+    <section class="section contact-section" id="contact">
+      <div class="contact-intro"><div class="eyebrow">LET'S TALK ABOUT YOUR IDEA</div><h2>What could we<br><span>make easier?</span></h2><p>Share a little about your business or the task you'd like to automate. We'll use the details to understand your enquiry.</p><div class="contact-points"><div><span>✓</span> No need to know the technical details</div><div><span>✓</span> Tell us the problem in your own words</div><div><span>✓</span> We won't ask for passwords or OTPs</div></div><div class="contact-alternate">Prefer Instagram? <a id="instagramLink" href="#" target="_blank" rel="noopener noreferrer">Message us on Instagram ↗</a></div></div>
+      <form class="contact-form" id="leadForm">
+        <div class="form-head"><div><span class="form-eyebrow">PROJECT ENQUIRY</span><h3>Tell us about your project</h3></div><span class="required-note">* Required</span></div>
+        <div class="field-row"><label>Full name *<input name="name" autocomplete="name" required maxlength="100" placeholder="Your name"></label><label>Business email *<input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="you@company.com"></label></div>
+        <div class="field-row"><label>Phone number <span class="optional">(optional)</span><input type="tel" name="phone" autocomplete="tel" maxlength="30" placeholder="+91 ..."></label><label>Company / business <span class="optional">(optional)</span><input name="company" autocomplete="organization" maxlength="120" placeholder="Business name"></label></div>
+        <label>What can we help with? *<select name="interest" required><option value="">Choose a topic</option><option>AI chatbot or assistant</option><option>Workflow automation</option><option>Instagram or messaging automation</option><option>Lead capture and Google Sheets</option><option>App integrations</option><option>Not sure yet — help me explore</option><option>Other</option></select></label>
+        <label>Your message *<textarea name="message" required minlength="10" maxlength="3000" rows="4" placeholder="What task would you like to make easier?"></textarea></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree that Prashant AI Automation may use these details to respond to this enquiry.</span></label>
+        <button class="button primary submit-button" type="submit">Send enquiry <span>↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite">Demo mode: connect the form to your n8n production webhook before collecting real enquiries.</p>
+        <p class="privacy-note">Please don't include passwords, OTPs, payment details, or sensitive identity documents.</p>
+      </form>
+    </section>
 
-        <p>© 2026 Priya Beauty Parlour</p>
+    <section class="bottom-cta"><div><div class="eyebrow">YOUR NEXT WORKFLOW STARTS HERE</div><h2>Let's turn a repetitive task<br>into a smarter process.</h2></div><a class="button light-button" href="#contact">Start a conversation <span>↗</span></a></section>
+  </main>
 
-        <p>Beauty • Style • Confidence</p>
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">P<span>AI</span></span><span class="brand-name">Prashant <b>AI Automation</b></span></a>
+    <p>Practical AI and workflow automation for everyday business challenges.</p>
+    <div class="footer-links"><a href="#services">Services</a><a href="#work">Use cases</a><a href="#contact">Contact</a><a href="privacy.html">Privacy notice</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Prashant AI Automation</span><span>Built with clarity. Designed for useful work.</span></div>
+  </footer>
 
-    </footer>
-
-
-    <!-- Automatic Slider JavaScript -->
-    <script>
-
-        let slides = document.querySelectorAll(".slide");
-
-        let currentSlide = 0;
-
-        function showSlide(index) {
-
-            slides.forEach(function(slide) {
-                slide.classList.remove("active");
-            });
-
-            slides[index].classList.add("active");
-        }
-
-        setInterval(function() {
-
-            currentSlide++;
-
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-
-            showSlide(currentSlide);
-
-        }, 4000);
-
-    </script>
-
+  <button class="chat-launcher" id="chatLauncher" aria-label="Open AI chat" aria-expanded="false"><span class="chat-launcher-icon">✦</span><span>Chat with us</span><span class="chat-online"></span></button>
+  <section class="chat-panel" id="chatPanel" aria-label="Website chat" hidden>
+    <div class="chat-head"><div class="chat-avatar">P<span>AI</span></div><div><b>Prashant AI Assistant</b><small><span class="chat-online"></span> Website assistant</small></div><button id="chatClose" aria-label="Close chat">×</button></div>
+    <div class="chat-messages" id="chatMessages"><div class="chat-bubble bot">Hello! Welcome to Prashant AI Automation. What would you like help with today?</div><div class="chat-hint">Demo chat UI — connect an n8n chat webhook to enable live AI replies.</div></div>
+    <form id="chatForm" class="chat-input-row"><input id="chatInput" name="message" maxlength="1500" placeholder="Write your message..." aria-label="Your message" required><button type="submit" aria-label="Send message">➤</button></form>
+    <div class="chat-disclaimer">Don't share passwords, OTPs, or payment details.</div>
+  </section>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
